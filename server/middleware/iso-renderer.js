@@ -1,3 +1,4 @@
+import babelRegister from 'babel-register';
 import renderer from '../../app/iso-server';
 
 export default (err, req, res, next) => {
