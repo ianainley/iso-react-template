@@ -26,7 +26,7 @@ const baseConfig = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loaders: ['babel'],
         include: context
       },

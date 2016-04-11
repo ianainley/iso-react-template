@@ -1,1 +1,3 @@
-var app = require('./server');
+import server from './server';
+
+server.init();

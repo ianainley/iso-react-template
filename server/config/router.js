@@ -1,7 +1,8 @@
 import babelRegister from 'babel-register';
 import renderer from '../../app/iso-server';
+const router = require('express').Router();
 
-export default (err, req, res, next) => {
+router.get('*', (req, res) => {
   // Setup app state here.
   const state = {};
   const renderOutput = renderer(JSON.stringify(state), req, res);
@@ -14,4 +15,6 @@ export default (err, req, res, next) => {
     res.set('Content-Type', 'text/html');
     res.status(200).end(renderOutput.html);
   }
-}
+});
+
+export default router;

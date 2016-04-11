@@ -1,12 +1,21 @@
+import path from 'path';
 import express from 'express';
-import renderMiddleware from './middleware/iso-renderer'
+import router from './config/router';
 
-const app = express();
+class Server {
+  constructor() {
+    this.app = express();
+  }
+  init() {
+    console.log('Initializing server...');
 
-app.use('*', renderMiddleware);
+    this.app.use('/bundles', express.static(path.join(__dirname, '..', 'public', 'bundles')));
+    this.app.use('/', router);
 
-app.listen(8080, () => {
-  console.log('Server listening on port 8080');
-});
+    this.app.listen(8080, () => {
+      console.log('Server listening on port 8080');
+    });
+  }
+}
 
-export default app;
+export default new Server();

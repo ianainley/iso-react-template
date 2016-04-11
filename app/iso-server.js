@@ -16,7 +16,9 @@ function render (state, req, res) {
     redirect: null
   };
 
-  match({ routes, location, basename }, (error, redirectLocation, renderProps) => {
+  const location = req.url;
+
+  match({ routes, location }, (error, redirectLocation, renderProps) => {
     if (error) {
       result.error = error;
     } else if (redirectLocation) {
@@ -32,7 +34,7 @@ function render (state, req, res) {
         .replace('META', head.meta.toString())
         .replace('LINK', head.link.toString());
     }
-  });
+  });  
 
   return result;
 }
