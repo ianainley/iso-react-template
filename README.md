@@ -13,7 +13,13 @@ After working with React/iso/flux apps for a while, this template has become my 
 1. Clone repo
 2. Run `npm install`
 
-## Build
+## Building
 1. Run `npm run build:dev`
 - TODO: setup prod webpack config
 - TODO: setup dev-server, hotloader, and nodemon
+
+## Linting
+Run `npm run lint`
+
+## Testing
+1. TODO: setup tests with karma, mocha, and JSDOM
