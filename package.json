@@ -1,8 +1,7 @@
 {
   "name": "react-iso-template",
   "version": "0.0.0",
-  "description": "NPM project template for creating isomorphic web apps using express, iso, and react.",
-  "main": "index.js",
+  "description": "NPM project template for creating isomorphic web apps using express, iso, and react.",  
   "scripts": {
     "compile:server": "babel server/ -d server_build/",
     "bundle:dev": "webpack --config ./webpack/dev.config.js",
