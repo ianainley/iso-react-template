@@ -1,0 +1,8 @@
+.test-class {
+  padding: 25px;
+  color: red;
+
+  span {
+    color: blue;
+  }
+}

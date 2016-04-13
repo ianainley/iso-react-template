@@ -1,5 +1,3 @@
-import path from 'path';
-import fs from 'fs';
 import Iso from 'iso';
 import React from 'react';
 import ReactDOMServer from 'react-dom/server';
@@ -7,7 +5,24 @@ import { match, RouterContext } from 'react-router';
 import routes from './routes.js';
 import Helmet from 'react-helmet';
 
-const html = fs.readFileSync(path.resolve(__dirname, '..', 'public', './index.html')).toString();
+function template ({ title, meta, link, body }) {
+  return `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <title>${title}</title>
+        <link rel="stylesheet" href="/bundles/styles.css" />
+        ${meta}
+        ${link}
+      </head>
+      <body>
+        ${body}
+        <script type="text/javascript" charset="utf-8" src="/bundles/app.js"></script>
+      </body>
+    </html>
+  `;
+}
 
 function render (state, req, res) {
   let result = {
@@ -25,16 +40,17 @@ function render (state, req, res) {
       result.redirect = redirectLocation;
     } else if (renderProps) {
       const content = ReactDOMServer.renderToString(<RouterContext {...renderProps} />);
-      const statefulContent = Iso.render(content, state);
+      const body = Iso.render(content, state);
       const head = Helmet.rewind();
 
-      result.html = html
-        .replace('BODY', statefulContent)
-        .replace('TITLE', head.title.toString())
-        .replace('META', head.meta.toString())
-        .replace('LINK', head.link.toString());
+      result.html = template({
+        body,
+        title: head.title.toString(),
+        meta: head.meta.toString(),
+        link: head.link.toString()
+      });
     }
-  });  
+  });
 
   return result;
 }

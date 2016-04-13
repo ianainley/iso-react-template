@@ -1,6 +1,5 @@
 node_modules
 .DS_Store
 public/bundles
-public/index.html
-build
+server_build
 *.log

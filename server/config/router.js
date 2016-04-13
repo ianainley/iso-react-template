@@ -1,5 +1,5 @@
 import babelRegister from 'babel-register';
-import renderer from '../../app/iso-server';
+import renderer from '../../public/bundles/server';
 const router = require('express').Router();
 
 router.get('*', (req, res) => {
