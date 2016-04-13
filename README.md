@@ -1,7 +1,8 @@
 ## Another express and react isomorphic app template
 
 ### Why?
-After working with React/iso/flux apps for a while, this template has become my go-to for getting started. Let's face it. There's a boat load of boilerplate work that goes into setting up one of these apps.
+After working with React/iso/flux apps for a while, this template has become my go-to for getting started.
+Let's face it. There's a boat load of boilerplate work that goes into setting up one of these apps.
 
 ### Features
 - Webpack configuration
