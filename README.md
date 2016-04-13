@@ -15,5 +15,5 @@ After working with React/iso/flux apps for a while, this template has become my 
 
 ## Build
 1. Run `npm run build:dev`
-TODO: setup prod webpack config
-TODO: setup dev-server, hotload, and nodemon
+- TODO: setup prod webpack config
+- TODO: setup dev-server, hotloader, and nodemon
