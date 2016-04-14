@@ -10,6 +10,11 @@ Let's face it. There's a boat load of boilerplate work that goes into setting up
 - Babel setup for server specific code
 - Router setup
 
+### What's left out
+There's no database, server middleware, or flux implementation included.
+It should be relatively simple to integrate any of these needs, and I'd like to
+keep this template light and somewhat unopinionated.
+
 ### Getting started
 1. Copy repo
 2. Run `npm install`
