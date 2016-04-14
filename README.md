@@ -29,3 +29,12 @@ Run `npm run lint`
 
 ### Testing
 1. TODO: setup tests with karma, mocha, and JSDOM
+
+### Styling
+PostCSS autoprefixing and precss (scss-like features) are included in the
+webpack config. Simply add or remove plugins as needed.
+
+Styles are modular and scoped to the component they're imported in,
+then compiled to a single stylesheet using ExtractTextWebpackPlugin.
+
+Follow the example in `app/components/AppRoot.jsx` for implementation details.
