@@ -1,4 +1,3 @@
-import babelRegister from 'babel-register';
 import renderer from '../../public/bundles/server';
 const router = require('express').Router();
 
@@ -14,7 +13,7 @@ router.get('*', (req, res) => {
   } else {
     res.set('Content-Type', 'text/html');
     res.status(200).end(renderOutput.html);
-  }
+  }  
 });
 
 export default router;
