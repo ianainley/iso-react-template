@@ -13,11 +13,11 @@ Let's face it. There's a boat load of boilerplate work that goes into setting up
 ### Getting started
 1. Copy repo
 2. Run `npm install`
+3. Run `npm run start:dev`
 
 ### Building
-1. Run `npm run build:dev`
-- TODO: setup prod webpack config
-- TODO: setup dev-server, hotloader, and nodemon
+1. For dev (nodemon, watch mode, source maps), run `npm run build:dev` or `npm run start:dev` to build then start server.
+2. For prod (compiled server code, optimized bundles), run `npm run build:prod` or `npm run start:prod` to build then start server.
 
 ### Linting
 Run `npm run lint`
