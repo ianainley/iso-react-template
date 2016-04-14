@@ -23,6 +23,7 @@ keep this template light and somewhat unopinionated.
 ### Building
 1. For dev (nodemon, watch mode, source maps), run `npm run build:dev` or `npm run start:dev` to build then start server.
 2. For prod (compiled server code, optimized bundles), run `npm run build:prod` or `npm run start:prod` to build then start server.
+3. TODO: Setup webpack hot-loading
 
 ### Linting
 Run `npm run lint`
