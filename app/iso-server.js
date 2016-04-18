@@ -11,7 +11,7 @@ function template ({ title, meta, link, body }) {
     <html>
       <head>
         <meta charset="utf-8">
-        <title>${title}</title>
+        ${title}
         <link rel="stylesheet" href="/bundles/styles.css" />
         ${meta}
         ${link}
